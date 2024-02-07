@@ -1,0 +1,82 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html,body {
+	margin: 0;
+	height: 100%;
+	overflow: hidden;
+}
+
+.console {
+	background-color: white;
+	color: red;
+}
+
+.wprompt {
+	font-family: Arial;
+	position: absolute;
+	background-color: rgba(0,0,0,0.7);
+	color: #fff;
+	width: 600px;
+	height: 150px;
+	display: flex;
+	flex-direction: column;
+	padding: 10px 15px;
+}
+
+.wprompt h1 {
+	font-size: 14px;
+	padding: 7px 0 12px 5px;
+}
+
+.wprompt textarea {
+	outline: none !important;
+	background-color: rgba(0,0,0,0.5);
+	border: 1px solid rgba(255,255,255,0.2);
+	flex: 1;
+	color: #ccc;
+	font-size: 15px;
+	width: 100%;
+	padding: 10px;
+	resize: none;
+	box-sizing: border-box;
+}
+
+.wprompt textarea:focus {
+	outline: none !important;
+}
+
+.wprompt .help {
+	font-size: 12px;
+	padding: 12px 0 7px 5px;
+}
+
+.requestManager {
+	left: 50%;
+	bottom: 3%;
+	max-width: 500px;
+	position: absolute !important;
+	transform: translate(-50%,-50%);
+}
+
+#NotifyBackground {
+	float: left;
+	font-size: 13px;
+	margin-top: 10px;
+ 	line-height: 20px;
+	padding: 15px 20px;
+ 	text-shadow: 1px 1px #000;
+	color: rgba(255,255,255,0.7);
+	background-color: rgba(0,0,0,0.4);
+	font-family: Arial,Helvetica,sans-serif;
+}
+
+#NotifyBackground green {
+	color: #85e200;
+}
+
+#NotifyBackground b {
+	color: rgba(255,255,255,0.9);
+}

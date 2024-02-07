@@ -1,0 +1,218 @@
+body,td,th { font-size: 12px; font-family: Arial,Helvetica,sans-serif; color: #888; cursor: default; vertical-align: baseline; outline: 0; line-height: 1; margin: 0; padding: 0; word-wrap: break-word; }
+a,a:link,a:visited,a:active,a:hover { font-family: Arial,Helvetica,sans-serif; font-size: 12px; color: #888; text-decoration: none; }
+div,span,applet,object,iframe,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr { border:0; outline:0; font-size:100%; vertical-align:baseline; background:transparent; margin:0; padding:0; }
+:focus { outline:0; }
+img { border:none; }
+::-webkit-scrollbar { width: 0; }
+::selection { background: #333; color: #888; }
+::-moz-selection { background: #333; color: #888; }
+
+#actionmenu {
+	top: 50%;
+	left: 50%;
+	width: 960px;
+	height: 560px;
+	padding: 20px;
+	display: none;
+	overflow: auto;
+	position: fixed;
+	background: url("images/background.png");
+	transform: translate(-50%,-50%);
+}
+
+button {
+	top: 50%;
+	left: 50%;
+	width: 30px;
+	height: 30px;
+	display: none;
+	position: fixed;
+	background: url("images/x.png");
+	transform: translate(-50%,-50%);
+	border: 0;
+	margin-top: -265px;
+	margin-left: 465px;
+}
+
+button:hover {
+	background: rgba(255,255,255,0.1) url("images/x.png");
+}
+
+#bank-top {
+	text-align: right;
+	line-height: 20px;
+	color: rgba(255,255,255,0.6);
+	margin-bottom: 20px;
+	width: 920px;
+	height: 54px;
+	float: left;
+	letter-spacing: 1.5px;
+	padding: 20px 40px 0 0;
+}
+
+#bank-top white {
+	color: #fff;
+}
+
+#bank-left {
+	margin-right: 21px;
+	width: 280px;
+	height: 466px;
+	float: left;
+}
+
+#bank-left a {
+	width: 240px;
+	padding: 15px 20px;
+	background-image: linear-gradient(#f3a000,#d57800);
+	float: left;
+	color: #523600;
+	margin: 0 0 10px 0;
+	border-radius: 2px;
+}
+
+#bank-left texto {
+	width: 100%;
+	font-weight: 700;
+	font-size: 20px;
+	padding-bottom: 5px;
+	float: left;
+}
+
+#bank-right {
+	width: 659px;
+	height: 466px;
+	float: left;
+}
+
+.title {
+	float: left;
+	color: #cdffef;
+	width: 647px;
+	font-size: 24px;
+	font-weight: 700;
+	padding: 10px 0 10px 10px;
+	letter-spacing: 1px;
+	border-bottom: 1px dashed #16b080;
+}
+
+.format {
+	float: left;
+	padding: 10px;
+	margin-top: 10px;
+	background: rgba(255,255,255,1);
+	border-radius: 2px;
+	box-shadow: 1px 1px rgba(0,0,0,0.1);
+}
+
+.format.active {
+	color: #999446;
+	background: rgba(255,255,190,1);
+}
+
+.format-left {
+	font-size: 30px;
+	text-align: center;
+	width: 40px;
+	padding: 8px 15px;
+	float: left;
+}
+
+.format-right {
+	float: left;
+	width: 549px;
+	padding: 4px 10px;
+	line-height: 20px;
+}
+
+.format-right texto {
+	font-size: 15px;
+	font-weight: 700;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+.format-right b {
+	color: #444;
+}
+
+.multas {
+	color: #155e39;
+	font-weight: 700;
+	position: absolute;
+	background: #2dc177;
+	padding: 12px 12px 11px;
+	margin: -1px 0 0 500px;
+	border-radius: 2px;
+}
+
+.multas:hover {
+	background: #31d080;
+}
+
+.faturas {
+	color: #155e39;
+	font-weight: 700;
+	position: absolute;
+	background: #2dc177;
+	padding: 12px 12px 11px;
+	margin: -1px 0 0 500px;
+	border-radius: 2px;
+}
+
+.faturas:hover {
+	background: #31d080;
+}
+
+.menu-depositar {
+	float: left;
+	width: 284px;
+	padding: 20px;
+	background: #fff;
+	margin-right: 11px;
+	border-radius: 2px;
+	box-shadow: 1px 1px rgba(0,0,0,0.1);
+}
+
+.deposito, .saque {
+	border: 0;
+	float: left;
+	width: 154px;
+	padding: 14px 20px 13px;
+	font-size: 20px;
+	margin-right: 10px;
+	background: rgba(0,0,0,0.1);
+	border-radius: 2px;
+}
+
+.depositar, .sacar {
+	width: 100px;
+	text-align: center;
+	color: #155e39;
+	font-weight: 700;
+	background: #2dc177;
+	padding: 15px 10px;
+	font-size: 20px;
+	border-radius: 2px;
+	float: left;
+}
+
+.menu-sacar {
+	float: left;
+	width: 284px;
+	padding: 20px;
+	background: #fff;
+	border-radius: 2px;
+}
+
+.title-sacar {
+	width: 284px;
+	float: left;
+	margin-bottom: 20px;
+}
+
+.title-sacar b {
+	font-size: 22px;
+	display: block;
+	margin-bottom: -5px;
+}

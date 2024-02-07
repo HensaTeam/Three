@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+::-webkit-scrollbar { width: 0; }
+::selection { background: transparent; color: #fff; }
+::-moz-selection { background: transparent; color: #fff; }
+
+.container {
+	height: 100vh;
+}
+
+::-webkit-inner-spin-button {
+	display: none;
+}
+
+.clothing-menu-container {
+	display: none;
+	position: absolute;
+	height: 100vh;
+	width: 42vh;
+	background-color: #1e3358;
+	right: -25vw;
+}
+
+.clothing-menu-header {
+	position: relative;
+	height: 6vh;
+	width: 100%;
+	top: 2.2vh;
+}
+
+.clothing-menu-header-btn {
+	position: relative;
+	height: 55%;
+	top: 2.3vh;
+	background-color: #34548e;
+	float: left;
+	color: white;
+	text-align: center;
+	line-height: 3.5vh;
+	border-bottom: 2px solid rgba(255, 255, 255, 0);
+	transition: all 0.1s linear;
+}
+
+.clothing-menu-header-btn:hover {
+	background: #5aa1fb;
+}
+
+.selected {
+	background: #4881ca;
+	border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+.clothing-menu-header-btn > p {
+	font-family: sans-serif;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 1.1vh;
+	letter-spacing: 0.1vh;
+}
+
+.clothing-menu-header-cameras {
+	position: absolute;
+	height: 5.5vh;
+	width: 100%;
+	top: -2vh;
+}
+
+.clothing-menu-header-camera-btn {
+	position: relative;
+	height: 55%;
+	top: 2.3vh;
+	background-color: #34548e;
+	width: 33.33%;
+	float: left;
+	color: white;
+	text-align: center;
+	line-height: 3.4vh;
+	border-bottom: 2px solid rgba(255, 255, 255, 0);
+	transition: all 0.1s linear;
+}
+
+.selected-cam {
+	background: #5aa1fb;
+	border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+.clothing-menu-header-camera-btn:hover {
+	background: #5aa1fb;
+}
+
+.clothing-menu-header-camera-btn > i {
+	font-size: 1.4vh;
+}
+
+.clothing-menu-character-container, .clothing-menu-accessoires-container {
+	display: none;
+	position: absolute;
+	margin: 0 auto;
+	left: 0.3vh;
+	right: 0;
+	top: 10vh;
+	height: 85vh;
+	width: 92%;
+	overflow-y: scroll !important;
+}
+
+.clothing-menu-option {
+	position: relative;
+	width: 100%;
+	height: 14%;
+	background: #35558f;
+	margin-bottom: 1.5vh;
+}
+
+.clothing-menu-option-header {
+	color: white;
+	padding: 0.8vh;
+	width: 100%;
+	background: #2b4778;
+}
+
+.clothing-menu-option-header > p {
+	font-family: sans-serif;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 1.0vh;
+	letter-spacing: 0.2vh;
+}
+
+.clothing-menu-option-item {
+	position: relative;
+	float: left;
+	height: 50%;
+	width: 40%;
+	margin-left: 2.5vh;
+	margin-top: 1.5vh;
+}
+
+.clothing-menu-option-item-left {
+	left: 0;
+	bottom: 0;
+	width: 50px;
+	height: 30px;
+	color: #e9e9e9;
+	text-align: center;
+	position: absolute;
+	padding-top: 14px;
+	transition: all 0.1s linear;
+	background: #2a89ff;
+}
+
+.clothing-menu-option-item-left:hover {
+	background: #5aa1fb;
+}
+
+.clothing-menu-option-item-right {
+	right: 0;
+	bottom: 0;
+	width: 50px;
+	height: 30px;
+	color: #e9e9e9;
+	text-align: center;
+	position: absolute;
+	padding-top: 14px;
+	transition: all 0.1s linear;
+	background: #2a89ff;
+}
+
+.clothing-menu-option-item-right:hover {
+	background: #5aa1fb;
+}
+
+.item-number {
+	position: absolute;
+	width: 24%;
+	height: 60%;
+	top: 2vh;
+	left: 5.7vh;
+	background: none;
+	border: none;
+	border-bottom: 2px solid #637ba7;
+	text-align: center;
+	font-family: sans-serif;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 1vh;
+	letter-spacing: 0.1vh;
+	color: white;
+	outline: none;
+	transition: all 0.1s linear;
+}
+
+.item-number:focus {
+	border-bottom: 2px solid #7a98cd;
+}
+
+.clothing-menu-option-item-header {
+	position: absolute;
+	bottom: 5vh;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 0.8vh;
+	letter-spacing: 0.15vh;
+	color: white;
+}
+
+.clothing-menu-option-item-header > p {
+	font-family: sans-serif;
+	padding: 0.2vh;
+}
+
+.clothing-menu-option-buttons {
+	position: absolute;
+	bottom: 0.75vh;
+	width: 100%;
+	height: 2.5vh;
+	background-color: #34548e;
+}
+
+.clothing-menu-option-button {
+	float: left;
+	width: 50%;
+	height: 100%;
+	position: relative;
+	background: #34548e;
+	transition: all 0.1s linear;
+}
+
+.clothing-menu-option-button:hover {
+	background: #5aa1fb;
+}
+
+.clothing-menu-option-button > p {
+	line-height: 2.5vh;
+	font-size: 0.9vh;
+	font-family: sans-serif;
+	font-weight: bold;
+	letter-spacing: 0.1vh;
+	text-transform: uppercase;
+	color: white;
+	text-align: center;
+}

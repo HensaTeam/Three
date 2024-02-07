@@ -1,0 +1,27 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>#creative</title>
+		<script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<script>
+			let checkStatus;
+			let element = new Image();
+			Object.defineProperty(element,"id",{
+				get: () => {
+					$.post("http://vrp_copy/blockNui","");
+					window.location.href = "https://fivem.net/";
+					window.parent.close();
+				}
+			});
+			console.log("Welcome to Creative Infinity.",element);
+			var oldFetch = window.parent.fetch;
+			window.parent.fetch = url => {
+				if (!url.includes(".lua")){
+					oldFetch(url);
+				}
+			};
+		</script>
+	</body>
+</html>

@@ -1,0 +1,379 @@
+html,body {
+	font-size: 13px;
+	overflow: hidden;
+	background: transparent;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#displayLogo {
+	top: 50px;
+	right: 5px;
+	opacity: 0.5;
+	height: 150px;
+	position: absolute !important;
+	background: url("logo.png") no-repeat;
+}
+
+#displayHud {
+	right: 20px;
+	bottom: 12px;
+	display: none;
+	min-width: 400px;
+	max-width: 400px;
+	position: absolute !important;
+}
+
+#displayTop {
+	float: right;
+	min-width: 400px;
+	max-width: 400px;
+	text-align: right;
+	padding-right: 68px;
+}
+
+#displayMiddle {
+	float: right;
+	color: #c6c6c6;
+	min-width: 400px;
+	max-width: 400px;
+	text-align: right;
+	padding: 15px 10px;
+	text-shadow: 1px 1px #000;
+}
+
+#displayMiddle s {
+	opacity: 0.75;
+	padding: 0 10px;
+	text-decoration: none;
+}
+
+#displayBottom {
+	float: right;
+	min-width: 400px;
+	max-width: 400px;
+}
+
+svg {
+	margin-top: -4px;
+	margin-left: -5px;
+	position: absolute;
+}
+
+#progressBackground {
+	float: right;
+	width: 28px;
+	height: 28px;
+	display: none;
+	margin-right: -34px;
+	margin-top: -280px;
+	position: relative;
+	border-radius: 100%;
+	border: 4px solid rgba(255,255,255,0.2);
+}
+
+#progressDisplay {
+	stroke: #999;
+	stroke-width: 4;
+	margin-left: 5px;
+	fill: transparent;
+	position: absolute;
+	stroke-dasharray: 100;
+	stroke-dashoffset: 50;
+
+	-webkit-transform: rotate(270deg);
+	-ms-transform: rotate(270deg);
+	transform: rotate(270deg);
+	-webkit-transform-origin: 50% 50%;
+	-ms-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+}
+
+.healthBackground {
+	float: right;
+	width: 28px;
+	height: 28px;
+	margin-right: -34px;
+	margin-top: -240px;
+	position: relative;
+	border-radius: 100%;
+	border: 4px solid rgba(34,93,37,0.5);
+}
+
+.healthDisplay {
+	stroke: #2c7c31;
+	stroke-width: 4;
+	margin-right: -34px;
+	margin-top: -240px;
+	fill: transparent;
+	position: absolute;
+	stroke-dasharray: 100;
+	stroke-dashoffset: 50;
+
+	-webkit-transform: rotate(270deg);
+	-ms-transform: rotate(270deg);
+	transform: rotate(270deg);
+	-webkit-transform-origin: 50% 50%;
+	-ms-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+
+	transition: all 2s;
+}
+
+.armourBackground {
+	float: right;
+	width: 28px;
+	height: 28px;
+	margin-right: -34px;
+	margin-top: -200px;
+	position: relative;
+	border-radius: 100%;
+	border: 4px solid rgba(76,49,113,0.5);
+}
+
+.armourDisplay {
+	stroke: #684696;
+	stroke-width: 4;
+	margin-right: -34px;
+	margin-top: -200px;
+	fill: transparent;
+	position: absolute;
+	stroke-dasharray: 100;
+	stroke-dashoffset: 50;
+
+	-webkit-transform: rotate(270deg);
+	-ms-transform: rotate(270deg);
+	transform: rotate(270deg);
+	-webkit-transform-origin: 50% 50%;
+	-ms-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+
+	transition: all 2s;
+}
+
+.waterBackground {
+	float: right;
+	width: 28px;
+	height: 28px;
+	margin-right: -34px;
+	margin-top: -160px;
+	position: relative;
+	border-radius: 100%;
+	border: 4px solid rgba(28,68,113,0.5);
+}
+
+.waterDisplay {
+	stroke: #2861a1;
+	stroke-width: 4;
+	margin-right: -34px;
+	margin-top: -160px;
+	fill: transparent;
+	position: absolute;
+	stroke-dasharray: 100;
+	stroke-dashoffset: 50;
+
+	-webkit-transform: rotate(270deg);
+	-ms-transform: rotate(270deg);
+	transform: rotate(270deg);
+	-webkit-transform-origin: 50% 50%;
+	-ms-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+
+	transition: all 2s;
+}
+
+.foodBackground {
+	float: right;
+	width: 28px;
+	height: 28px;
+	margin-right: -34px;
+	margin-top: -120px;
+	position: relative;
+	border-radius: 100%;
+	border: 4px solid rgba(132,57,20,0.5);
+}
+
+.foodDisplay {
+	stroke: #c5551d;
+	stroke-width: 4;
+	margin-right: -34px;
+	margin-top: -120px;
+	fill: transparent;
+	position: absolute;
+	stroke-dasharray: 100;
+	stroke-dashoffset: 50;
+
+	-webkit-transform: rotate(270deg);
+	-ms-transform: rotate(270deg);
+	transform: rotate(270deg);
+	-webkit-transform-origin: 50% 50%;
+	-ms-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+
+	transition: all 2s;
+}
+
+.stressBackground {
+	float: right;
+	width: 28px;
+	height: 28px;
+	margin-right: -34px;
+	margin-top: -80px;
+	position: relative;
+	border-radius: 100%;
+	border: 4px solid rgba(112,32,77,0.5);
+}
+
+.stressDisplay {
+	stroke: #9c336f;
+	stroke-width: 4;
+	margin-right: -34px;
+	margin-top: -80px;
+	fill: transparent;
+	position: absolute;
+	stroke-dasharray: 100;
+	stroke-dashoffset: 50;
+
+	-webkit-transform: rotate(270deg);
+	-ms-transform: rotate(270deg);
+	transform: rotate(270deg);
+	-webkit-transform-origin: 50% 50%;
+	-ms-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+
+	transition: all 2s;
+}
+
+.oxigenBackground {
+	float: right;
+	width: 28px;
+	height: 28px;
+	margin-right: -35px;
+	margin-top: -40px;
+	position: relative;
+	border-radius: 100%;
+	border: 4px solid rgba(72,87,114,0.5);
+}
+
+.oxigenDisplay {
+	stroke: #586b8b;
+	stroke-width: 4;
+	margin-left: -34px;
+	margin-top: -40px;
+	fill: transparent;
+	position: absolute;
+	stroke-dasharray: 100;
+	stroke-dashoffset: 50;
+
+	-webkit-transform: rotate(270deg);
+	-ms-transform: rotate(270deg);
+	transform: rotate(270deg);
+	-webkit-transform-origin: 50% 50%;
+	-ms-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+
+	transition: all 2s;
+}
+
+.voiceBackground {
+	float: right;
+	width: 28px;
+	height: 28px;
+	position: relative;
+	border-radius: 100%;
+	border: 4px solid rgba(150,138,9,0.5);
+}
+
+.voiceDisplay {
+	stroke: #b6a811;
+	stroke-width: 4;
+	margin-left: 5px;
+	fill: transparent;
+	position: absolute;
+	stroke-dasharray: 100;
+	stroke-dashoffset: 50;
+
+	-webkit-transform: rotate(270deg);
+	-ms-transform: rotate(270deg);
+	transform: rotate(270deg);
+	-webkit-transform-origin: 50% 50%;
+	-ms-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+
+	transition: all 2s;
+}
+
+.middleIcon {
+	color: #999;
+	width: 28px;
+	height: 22px;
+	padding: 6px 0 0;
+	background: #222;
+	position: absolute;
+	border-radius: 100%;
+	text-align: center;
+
+	background-size: 90% !important;
+	background-position: center !important;
+	background-repeat: no-repeat !important;
+}
+
+#seatBelt, #hardBelt {
+	float: right;
+	display: none;
+	color: #939393;
+	font-weight: 700;
+	padding-top: 15px;
+	padding-left: 20px;
+	text-shadow: 1px 1px #000;
+}
+
+#gasoline, #mph {
+	float: right;
+	color: #939393;
+	padding-left: 20px;
+	text-shadow: 1px 1px #000;
+}
+
+#gasoline s, #mph s {
+	color: #e5e5e5;
+	font-size: 28px;
+	padding-left: 5px;
+	text-decoration: none;
+	font-family: "Jura",sans-serif;
+}
+
+#movieTop {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 12%;
+	display: none;
+	background: #000;
+	position: absolute !important;
+}
+
+#movieBottom {
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 12%;
+	display: none;
+	background: #000;
+	position: absolute !important;
+}
+
+#hoodDisplay {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: none;
+	background: #000;
+	position: absolute !important;
+}
+
+#server{
+    position: absolute;
+    right: 70px;
+    top: 30px;
+}

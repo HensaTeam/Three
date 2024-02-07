@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>#creative</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+	<style>
+		#index {
+			margin: 30px;
+			display: none;
+			position: absolute;
+		}
+
+		.spawnNow {
+			color: #fff;
+			width: 200px;
+			list-style: none;
+			user-select: none;
+			padding: 8px 25px;
+			text-align: center;
+			border-radius: 3px;
+			margin-bottom: 10px;
+			transition: width 0.5s;
+			background: rgba(50,10,0,0.5);
+			font-family: 'Roboto',sans-serif;
+		}
+
+		.spawnNow:hover {
+			background: rgba(50,10,0,0.7);
+		}
+
+		.spawn {
+			color: #fff;
+			width: 200px;
+			list-style: none;
+			user-select: none;
+			padding: 8px 25px;
+			text-align: center;
+			border-radius: 3px;
+			margin-bottom: 10px;
+			transition: width 0.5s;
+			background: rgba(0,0,0,0.5);
+			font-family: 'Roboto',sans-serif;
+		}
+
+		.spawn:hover {
+			background: rgba(0,0,0,0.7);
+		}
+	</style>
+</head>
+<body>
+	<div id="index">
+		<ul>
+			<li class="spawnNow" data-spawn="spawn">Spawn</li>
+			<li class="spawn" data-spawn="davis">Davis Avenue</li>
+			<li class="spawn" data-spawn="hawick">Hawick Avenue</li>
+			<li class="spawn" data-spawn="west">West Mirror Drive</li>
+			<li class="spawn" data-spawn="little">Little Bighorn Avenue</li>
+			<li class="spawn" data-spawn="avenue">San Andreas Avenue</li>
+			<li class="spawn" data-spawn="goma">Goma Street</li>
+			<li class="spawn" data-spawn="delperro">Del Perro Freeway</li>
+			<li class="spawn" data-spawn="route68">Route 68</li>
+			<li class="spawn" data-spawn="procopio">Procopio Promenade</li>
+		</ul>
+	</div>
+	<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+	<script>
+		$(() => {
+			window.addEventListener('message',(event) => {
+				if (event.data.display) {
+					$('#index').show();
+				} else {
+					$('#index').hide();
+				}
+			})
+
+			$('li').click(function(){
+				$.post('http://vrp_login/spawn',JSON.stringify({ choice: $(this).data('spawn') }));
+			});
+		})
+	</script>
+</body>
+</html>

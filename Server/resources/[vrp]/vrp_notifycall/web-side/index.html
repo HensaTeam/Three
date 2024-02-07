@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>#creative</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
+		<script src="https://code.jquery.com/jquery-3.5.0.js" integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc=" crossorigin="anonymous"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+
+		<style>
+			::-webkit-scrollbar { background: transparent; width: 0; }
+			::selection { background: transparent; color: #fff; }
+			::-moz-selection { background: transparent; color: #fff; }
+
+			* {
+				color: white;
+				font-family: Arial,Helvetica,sans-serif;
+				-webkit-user-select: none;
+			}
+
+			.notifications {
+				right: 0;
+				top: 100px;
+				overflow: hidden;
+				min-width: 350px;
+				max-height: 760px;
+				position: absolute;
+			}
+
+			.notification {
+				display: flex;
+				padding: 20px;
+				margin-top: 10px;
+				box-sizing: border-box;
+				background: rgba(41,76,119,0.8);
+				border-left: rgba(31,59,92,0.8) 5px solid;
+				justify-content: space-between;
+				border-top-left-radius: 3px;
+				border-bottom-left-radius: 3px;
+			}
+
+			.notify-title {
+				display: flex;
+				font-size: 12px;
+				margin-bottom: 3px;
+			}
+
+			.notify-ttext {
+				padding-top: 5px;
+			}
+
+			.notify-code {
+				margin-right: 7px;
+				border-radius: 3px;
+				padding: 5px 7px 4px;
+				background-color: #ab4335;
+			}
+
+			.notify-body {
+				display: flex;
+				font-size: 13px;
+				flex-flow: column;
+				padding-left: 10px;
+			}
+
+			.notify-body span {
+				margin-top: 10px;
+			}
+
+			.notify-body span span {
+				margin-left: 10px;
+			}
+
+			.notify-button {
+				height: 20px;
+			}
+
+			.notify-button2 {
+				height: 20px;
+				margin-top: 15px;
+			}
+
+			.notify-button svg {
+				cursor: pointer;
+			}
+
+			.image-buttons {
+				display: flex;
+				flex-flow: column;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="notifications"></div>
+	</body>
+
+	<script>
+		$(() => {
+			let blocked = false
+			let list = []
+
+			window.addEventListener("message",function(event){
+				switch(event.data.action){
+					case 'notify':
+						addNotification(event.data.data)
+					break
+
+					case 'showAll':
+						if (list.length > 0) {
+							showLast()
+							$.post("http://vrp_notifycall/focusOn")
+						}
+					break
+
+					case 'hideAll':
+						hideAll()
+						$.post("http://vrp_notifycall/focusOff")
+					break
+				}
+			})
+
+			document.onkeyup = function(data){
+				if (data.which == 27){
+					hideAll()
+					$.post("http://vrp_notifycall/focusOff")
+				}
+			}
+
+			$(document).on("click",".notify-button",function(){
+				$.post("http://vrp_notifycall/setWay",JSON.stringify({ x: $(this).attr("data-x"), y: $(this).attr("data-y") }))
+			})
+
+			$(document).on("click",".notify-button2",function(){
+				$.post("http://vrp_notifycall/phoneCall",JSON.stringify({ phone: $(this).attr("data-phone") }))
+			})
+
+			const hideAll = () => {
+				blocked = false
+				$(".notifications").css("overflow","hidden")
+				$(".notifications").html("")
+			}
+
+			const addNotification = data => {
+				if (list.length > 9) list.shift()
+
+				const html = `
+					<div class="notification" style="background: rgba(${data.rgba[0]},${data.rgba[1]},${data.rgba[2]},0.8); border-left: rgba(${data.rgba[0]},${data.rgba[1]},${data.rgba[2]},1.0) 5px solid;">
+						<div class="notify-info">
+							<div class="notify-title">
+								<div class="notify-code">10-${data.code}</div>
+								<div class="notify-ttext">${data.title}</div>
+							</div>
+							<div class="notify-body">
+								${data.street === undefined ? "" : `<span><i class="fa fa-arrow-right"></i><span>${data.street}</span></span>`}
+								${data.criminal === undefined ? "" : `<span><i class="fa fa-arrow-right"></i><span>${data.criminal}</span></span>`}
+								${data.vehicle === undefined ? "" : `<span><i class="fa fa-arrow-right"></i><span>${data.vehicle}</span></span>`}
+								${data.name === undefined ? "" : `<span><i class="fa fa-arrow-right"></i><span>${data.name}</span></span>`}
+							</div>
+						</div>
+
+					<div class="image-buttons"><div data-x="${data.x}" data-y="${data.y}" class="notify-button"><i class="fas fa-map-marker-alt fa-lg"></i></div>
+
+					${data.phone === undefined ? "" : `<div data-phone="${data.phone}" class="notify-button2"><i class="fas fa-phone-alt"></i></div>`}
+				</div></div>`
+
+				list.push(html)
+
+				if (!blocked){
+					$(html).prependTo(".notifications")
+					.hide()
+					.show("slide",{ direction: "right" },250)
+					.delay(5000)
+					.hide("slide",{ direction: "right" },250)
+				}
+			}
+
+			const showLast = () => {
+				hideAll()
+				blocked = true
+
+				$(".notifications").css("overflow-y","scroll")
+				for (i in list) {
+					$(list[i]).prependTo(".notifications")
+				}
+			}
+		})
+	</script>
+</html>

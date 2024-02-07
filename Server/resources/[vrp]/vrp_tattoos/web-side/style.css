@@ -1,0 +1,184 @@
+::-webkit-scrollbar { display: none; }
+
+body {
+	margin: 0px;
+	font-family: "Arial";
+	letter-spacing: 1px;
+	font-size: 12px;
+	color: #fff;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+#tattoo-container {
+	position: fixed;
+	height: 100%;
+	max-height: 100%;
+	width: 420px;
+	left: -440px;
+	background: rgba(19,20,24,.9);
+	padding: 15px 5px 15px 15px;
+	transition: all .4s ease-out;
+	opacity: .5;
+}
+
+#tattoo-container.open {
+	opacity: 1;
+	transform: translateX(440px);
+}
+
+#items {
+	position: absolute;
+	width: calc(100% - 15px);
+	height: calc(100% - 340px);
+	overflow-y: scroll;
+}
+
+.column {
+	width: calc(50% - 5px);
+	float: left;
+}
+
+.title-area {
+	margin-bottom: 15px;
+	letter-spacing: 2px;
+	font-size: 14px;
+	font-weight: bold;
+	text-transform: uppercase;
+	opacity: .7;
+	text-shadow: 1px 1px 0px rgba(0,0,0,.1);
+}
+
+.hotkey {
+	margin-bottom: 16px;
+}
+
+.hotkey:last-child {
+	margin-bottom: 0px;
+}
+
+.hotkey span {
+	font-weight: bold;
+	font-size: 14px;
+}
+
+#reset {
+	text-align: center;
+	padding: 15px 0px;
+	margin-top: 15px;
+	background: #2d2f34;
+	width: 169px;
+	cursor: pointer;
+	border-radius: 2px;
+	text-transform: uppercase;
+	font-size: 11px;
+	font-weight: bold;
+	transition: all .1s ease-out;
+}
+
+#reset:hover {
+	background: #34548e;
+	box-shadow: 3px 3px 0px rgba(255,255,255,.05);
+}
+
+.categories {
+	overflow: auto;
+}
+
+.category {
+	width: 50px;
+	height: 50px;
+	background: #2d2f34;
+	border-radius: 2px;
+	cursor: pointer;
+	float: left;
+	transition: all .1s ease-out;
+}
+
+.category:hover {
+	background: #34548e;
+	box-shadow: 3px 3px 0px rgba(255,255,255,.05);
+}
+
+.category:first-child {
+	margin: 0px 10px 10px 0px;
+	background: url(images/head.png) no-repeat center/30px 30px,#2d2f34;
+}
+
+.category:first-child:hover, .category:first-child.selected {
+	background: url(images/head.png) no-repeat center/30px 30px,#34548e;
+}
+
+.category:nth-child(2) {
+	margin: 0px 10px 10px 0px;
+	background: url(images/arm-left.png) no-repeat center/30px 30px,#2d2f34;
+}
+
+.category:nth-child(2):hover, .category:nth-child(2).selected {
+	background: url(images/arm-left.png) no-repeat center/30px 30px,#34548e;
+}
+
+.category:nth-child(3) {
+	margin-bottom: 10px;
+	background: url(images/arm-right.png) no-repeat center/30px 30px,#2d2f34;
+}
+
+.category:nth-child(3):hover, .category:nth-child(3).selected {
+	background: url(images/arm-right.png) no-repeat center/30px 30px,#34548e;
+}
+
+.category:nth-child(4) {
+	margin-right: 10px;
+	background: url(images/chest.png) no-repeat center/30px 30px,#2d2f34;
+}
+
+.category:nth-child(4):hover, .category:nth-child(4).selected {
+	background: url(images/chest.png) no-repeat center/30px 30px,#34548e;
+}
+
+.category:nth-child(5) {
+	margin-right: 10px;
+	background: url(images/leg-left.png) no-repeat center/30px 30px,#2d2f34;
+}
+
+.category:nth-child(5):hover, .category:nth-child(5).selected {
+	background: url(images/leg-left.png) no-repeat center/30px 30px,#34548e;
+}
+
+.category:nth-child(6) {
+	background: url(images/leg-right.png) no-repeat center/30px 30px,#2d2f34;
+}
+
+.category:nth-child(6):hover, .category:nth-child(6).selected {
+	background: url(images/leg-right.png) no-repeat center/30px 30px,#34548e;
+}
+
+.category-items {
+	float: left;
+	width: 100%;
+	margin-top: 30px;
+}
+
+.item {
+	width: 50px;
+	height: 50px;
+	background: #2d2f34;
+	border-radius: 2px;
+	cursor: pointer;
+	float: left;
+	line-height: 50px;
+	text-align: center;
+	font-size: 13px;
+	font-weight: bold;
+	margin: 0px 10px 10px 0px;
+	transition: all .1s ease-out;
+}
+
+.item:hover, .item.selected {
+	background: #34548e;
+	box-shadow: 3px 3px 0px rgba(255,255,255,.05);
+}

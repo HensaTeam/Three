@@ -1,0 +1,34 @@
+body,td,th { font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: #666; cursor: default; vertical-align: baseline; outline: 0; line-height: 1; margin: 0; padding: 0; word-wrap: break-word; }
+a,a:link,a:visited,a:active,a:hover { font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #666; text-decoration: none; }
+div,span,applet,object,iframe,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr { border:0; outline:0; font-size:100%; vertical-align:baseline; background:transparent; margin:0; padding:0; }
+:focus { outline:0; }
+img { border:none; }
+::-webkit-scrollbar { width: 0; }
+::selection { background: transparent; color: #666; }
+::-moz-selection { background: transparent; color: #666; }
+/* ---------------------------------------------------------------------------------------------------------------- */
+#mainPage {
+	left: 50%;
+	bottom: 5%;
+	width: 436px;
+	display: none;
+	position: absolute;
+	transform: translate(-50%,-50%);
+}
+
+#mainPage li {
+	float: left;
+	padding: 15px;
+	font-size: 20px;
+	text-align: center;
+	margin: 0 5px;
+	border-radius: 100px;
+	list-style-type: none;
+	background: rgba(0,0,0,0.5);
+	color: rgba(255,255,255,0.5);
+}
+
+#mainPage li:hover {
+	color: rgba(0,0,0,0.8);
+	background: rgba(255,255,255,0.5);
+}

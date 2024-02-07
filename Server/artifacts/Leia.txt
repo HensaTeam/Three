@@ -1,0 +1,4 @@
+
+Baixe o Último artefato disponível e extraia tudo dentro desta pasta.
+
+https://runtime.fivem.net/artifacts/fivem/build_server_windows/master/

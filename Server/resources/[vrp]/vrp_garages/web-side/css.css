@@ -1,0 +1,212 @@
+#actionmenu {
+	width: 100%;
+	height: 100%;
+	display: none;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#garagem {
+	top: 0;
+	right: 0;
+	height: 100%;
+	width: 17.5vw;
+	position: fixed;
+	background-color: #262939;
+}
+
+#garagem button{
+	position: relative;
+	display: grid;
+	align-items: center;
+	margin-top: 5%;
+	text-align: left;
+	float: left;	
+	height: 7%;
+	width: 45%;
+	border: none;
+	margin-left: 3.5%;
+	border-radius: 0.2vmax;
+}
+
+#garagem button b{
+	position: relative;
+	top: 75%;
+	color: rgba(255, 255, 255, 0.6);
+	margin-left: 5%;
+	font-size: 0.8vmax;
+}
+
+#garagem button p{
+	margin-left: 5%;
+	font-size: 0.7vmax;
+}
+
+.spawn {
+	color: rgba(255, 255, 255, 0.4);
+	background: rgba(40,230,90,0.6);
+}
+
+.store {
+	color: rgba(255, 255, 255, 0.4);
+	background: rgba(220,170,15,0.6);
+}
+
+.spawn:hover {
+	background: rgba(40,230,90,0.7);
+}
+
+.store:hover {
+	background: rgba(220,170,15,0.7);
+}
+
+#cars{
+	position: absolute;
+	bottom: 0;
+	height: 89%;
+	width: 100%;
+	overflow: auto;
+}
+
+.imagem-carro  img {
+	width: 13vw;
+    height: 13vh;
+    top: 0.5vw;
+    left: 2.5vw;
+    margin: auto;
+    position: relative;
+	float: center;
+}
+
+.vehicle{
+	height: 15.5%;
+	width: 16.35vw;
+	background-color: rgb(59, 65, 87);
+	border-radius: 5px;
+	margin-left: 3.5%;
+}
+
+.vehicle:hover{
+	background-color: #41475c;
+}
+
+.vehicle.active{
+	background-color: #4c536d;
+}
+
+.vehicle-name{
+	position: relative;
+	margin-left: 45%;
+	top: 5%;
+	color: rgba(255, 255, 255, 0.75);
+	font-size: 0.85vmax;
+}
+
+#infos{
+	position: relative;
+	top: -5%;
+	height: 80%;
+	border-radius: 5px;
+	width: 95%;
+	margin-left: 2.5%;
+}
+
+.vehicle-engine{
+	display: flex;
+	float: left;
+	color: rgba(255, 255, 255, 0.6);
+	height: 8%;
+	width: 90%;
+	margin-top: 5%;
+}
+
+.vehicle-engine b{
+	position: relative;
+	font-size: 0.7vmax;
+	color: rgba(255, 255, 255, 0.6);
+	bottom: 20%;
+	text-decoration: none;
+}
+
+.vehicle-gas{
+	display: flex;
+	float: left;
+	color: rgba(255, 255, 255, 0.6);
+	height: 8%;
+	width: 90%;
+	margin-top: 5%;
+}
+
+.vehicle-gas b{
+	position: relative;
+	font-size: 0.7vmax;
+	bottom: 20%;
+	text-decoration: none;
+}
+
+.vehicle-chassi{
+	display: flex;
+	float: left;
+	color: rgba(255, 255, 255, 0.6);
+	height: 8%;
+	width: 90%;
+	margin-top: 5%;
+}
+
+.vehicle-chassi b{
+	position: relative;
+	font-size: 0.7vmax;
+	bottom: 20%;
+	text-decoration: none;
+}
+
+.vehicle-display{
+	position: absolute;
+	height: 1vh;
+	border-radius: 0.5vw;
+	width: 65%;
+	right: 6%;
+	background: rgb(255, 166, 0);
+    background: linear-gradient(90deg, rgb(180, 122, 14) 0%, rgba(255, 166, 0) 100%);
+}
+
+.vehicle-back{
+	height: 100%;
+	border-radius: 0.5vw;
+	width: 25%;
+	background: rgb(255, 166, 0);
+    background: linear-gradient(90deg, rgb(180, 122, 14) 0%, rgba(255, 166, 0) 100%);
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #e1e1e1;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #000000;
+}
+::-webkit-scrollbar-track {
+  background: #666666;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-track:hover {
+  background: #666666;
+}
+::-webkit-scrollbar-track:active {
+  background: #333333;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
