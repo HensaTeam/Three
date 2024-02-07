@@ -201,7 +201,7 @@ const requestCrafting = () => {
 
 			if (data.inventoryUser[slot] !== undefined){
 				const v = data.inventoryUser[slot];
-				const item = `<div class="item populated" style="background-image: url('http://191.96.78.29/inventario/${v.index}.png');" data-item-key="${v.key}" data-name-key="${v.name}" data-slot="${slot}">
+				const item = `<div class="item populated" style="background-image: url('nui://vrp_inventory/web-side/itens/${v.index}.png');" data-item-key="${v.key}" data-name-key="${v.name}" data-slot="${slot}">
 					<div id="peso">${(v.peso*v.amount).toFixed(2)}</div>
 					<div id="quantity">${formatarNumero(v.amount)}x</div>
 					<div id="itemname">${v.name}</div>
@@ -230,7 +230,7 @@ const requestCrafting = () => {
 
 				list = list.substring(0,list.length - 1);
 
-				const item = `<div class="item2 populated" style="background-image: url('http://191.96.78.29/inventario/${v.index}.png');" data-item-key="${v.key}" data-name-key="${v.name}" data-item-list="${list}" data-slot="${slot}">
+				const item = `<div class="item2 populated" style="background-image: url('nui://vrp_inventory/web-side/itens/${v.index}.png');" data-item-key="${v.key}" data-name-key="${v.name}" data-item-list="${list}" data-slot="${slot}">
 					<div id="peso">${(v.weight).toFixed(2)}</div>
 					<div id="quantity">1x</div>
 					<div id="itemname">${v.name}</div>

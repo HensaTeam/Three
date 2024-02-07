@@ -260,7 +260,7 @@ const updateChest = () => {
 
 			if (data.inventario[slot] !== undefined) {
 				const v = data.inventario[slot];
-				const item = `<div class="item populated" title="" data-max="${v["max"]}" data-type="${v["type"]}" style="background-image: url('http://191.96.78.29/inventario/${v.index}.png'); background-position: center; background-repeat: no-repeat;" data-amount="${v.amount}" data-peso="${v.peso}" data-item-key="${v.key}" data-name-key="${v.name}" data-slot="${slot}" data-description="${v["desc"]}">
+				const item = `<div class="item populated" title="" data-max="${v["max"]}" data-type="${v["type"]}" style="background-image: url('nui://vrp_inventory/web-side/itens/${v.index}.png'); background-position: center; background-repeat: no-repeat;" data-amount="${v.amount}" data-peso="${v.peso}" data-item-key="${v.key}" data-name-key="${v.name}" data-slot="${slot}" data-description="${v["desc"]}">
 					<div class="top">
 						<div class="itemWeight">${(v.peso*v.amount).toFixed(2)}</div>
 						<div class="itemAmount">${formatarNumero(v.amount)}x</div>
@@ -285,7 +285,7 @@ const updateChest = () => {
 
 			if (nameList2[x-1] !== undefined) {
 				const v = nameList2[x-1];
-				const item = `<div class="item populated" title="" data-max="${v["max"]}" data-type="${v["type"]}" style="background-image: url('http://191.96.78.29/inventario/${v.index}.png'); background-position: center; background-repeat: no-repeat;" data-amount="${v.amount}" data-peso="${v.peso}" data-item-key="${v.key}" data-name-key="${v.name}" data-slot="${slot}" data-description="${v["desc"]}">
+				const item = `<div class="item populated" title="" data-max="${v["max"]}" data-type="${v["type"]}" style="background-image: url('nui://vrp_inventory/web-side/itens/${v.index}.png'); background-position: center; background-repeat: no-repeat;" data-amount="${v.amount}" data-peso="${v.peso}" data-item-key="${v.key}" data-name-key="${v.name}" data-slot="${slot}" data-description="${v["desc"]}">
           
 					<div class="top">
 						<div class="itemWeight">${(v.peso * v.amount).toFixed(2)}</div>

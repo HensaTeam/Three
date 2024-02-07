@@ -178,7 +178,7 @@ const requestShop = () => {
 
 			if (data.inventoryUser[slot] !== undefined) {
 				const v = data.inventoryUser[slot];
-				const item = `<div class="item populated" data-max="${v["max"]}" data-type="${v["type"]}" style="background-image: url('http://191.96.78.29/inventario/${v.index}.png'); background-position: center; background-repeat: no-repeat;" data-item-key="${v.key}" data-name-key="${v.name}" data-peso="${v["peso"]}" data-amount="${v.amount}" data-slot="${slot}" data-description="${v["desc"]}">
+				const item = `<div class="item populated" data-max="${v["max"]}" data-type="${v["type"]}" style="background-image: url('nui://vrp_inventory/web-side/itens/${v.index}.png'); background-position: center; background-repeat: no-repeat;" data-item-key="${v.key}" data-name-key="${v.name}" data-peso="${v["peso"]}" data-amount="${v.amount}" data-slot="${slot}" data-description="${v["desc"]}">
 					<div class="top">
 						<div class="itemWeight">${(v.peso * v.amount).toFixed(2)}</div>
 						<div class="itemAmount">${formatarNumero(v.amount)}x</div>
@@ -200,7 +200,7 @@ const requestShop = () => {
 
 			if (nameList2[x-1] !== undefined){
 				const v = nameList2[x-1];
-				const item = `<div class="item populated" title="" data-max="${v["max"]}" data-type="${v["type"]}" style="background-image: url('http://191.96.78.29/inventario/${v.index}.png'); background-position: center; background-repeat: no-repeat;" data-item-key="${v.key}" data-name-key="${v.name}" data-price="${v["price"]}" data-peso="${v["peso"]}" data-slot="${slot}" data-description="${v["desc"]}">
+				const item = `<div class="item populated" title="" data-max="${v["max"]}" data-type="${v["type"]}" style="background-image: url('nui://vrp_inventory/web-side/itens/${v.index}.png'); background-position: center; background-repeat: no-repeat;" data-item-key="${v.key}" data-name-key="${v.name}" data-price="${v["price"]}" data-peso="${v["peso"]}" data-slot="${slot}" data-description="${v["desc"]}">
 					<div class="top">
 						<div class="itemWeight">${(v.weight).toFixed(2)}</div>
 						<div class="itemAmount">$${formatarNumero(v.price)}</div>
