@@ -14,4 +14,4 @@ Este conteúdo é distribuído sob a **Licença __MIT__**. Consulte o arquivo `L
 
 -------
 
-![Hensa](https://cdn.discordapp.com/attachments/1130691272848445530/1201996706351435796/2.2.png "Hensa")
+![Hensa](https://raw.githubusercontent.com/OiSouHen/OiSouHen/main/images/Banner.png "Hensa")
