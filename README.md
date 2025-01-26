@@ -16,4 +16,4 @@ Este conteúdo é distribuído sob a **Licença __MIT__**. Consulte o arquivo `L
 
 -------
 
-![Hensa](https://hensa.store/Mawu/image/LogoHensa.png "Hensa")
+![Hensa](https://hensa.store/imgs/HensaLogoDark.png "Hensa")
