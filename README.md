@@ -6,7 +6,7 @@ Acesse o nosso **Website**: [Clique aqui para entrar](https://hensa.site/).
 -------
 
 ### 💬 Comunidade
-Maiores informações você só encontra em nosso **Discord**: [Clique aqui para entrar](https://discord.com/invite/E4BsFbXwRX).
+Maiores informações você só encontra em nosso **Discord**: [Clique aqui para entrar](https://discord.com/invite/VKkWDXSaHh).
 
 -------
 
